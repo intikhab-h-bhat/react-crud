@@ -192,7 +192,6 @@ catch(error){
         <button type='submit'>{clinics.clinicID? "Update Clinic":"Add Clinic"}</button>
 
 
-
         </form>
 
         </div>

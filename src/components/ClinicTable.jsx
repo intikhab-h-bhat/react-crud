@@ -8,7 +8,7 @@ return(
 <div className='clinic-details'>
 
 <h2>{props.name}</h2>
-<p>{props.email}</p>
+<p>{props.age}</p>
 </div>
 
     

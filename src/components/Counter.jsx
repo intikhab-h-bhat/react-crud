@@ -27,9 +27,11 @@ export default function Counter(){
     return(
 
         <>
+
         <p>Count is {count}</p>
         <p>The Number Is {count%2==0?"Even":"Odd"}</p>
         <button onClick={()=> setCount(count+1)}>Click Me</button>
+
         </>
 
     )
