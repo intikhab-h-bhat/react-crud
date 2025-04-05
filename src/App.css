@@ -33,12 +33,16 @@ h1 {
 
 .navbar-nav {
   display: flex;
-  justify-content: center;
+  justify-content:center;
   gap: 15px;
 }
 
+.nav-item {
+  list-style-type: none;
+}
 .nav-link {
   text-decoration: none;
+  list-style-type: none;
   color: #007bff;
   font-weight: bold;
   padding: 8px 15px;
@@ -47,6 +51,7 @@ h1 {
 }
 
 .nav-link:hover {
+  list-style-type: none;
   background-color: #007bff;
   color: white;
 }
