@@ -1,11 +1,10 @@
 
 body{
-    /* background-color: gray; */
+     /* background-color: gray;  */
     font-family: 'Times New Roman', Times, serif;
     display:flex;
     justify-content: center;
-    align-items: center;
-  
+    align-items: center; 
     
 }
 .main-container{
@@ -47,8 +46,8 @@ body{
 
 /* Form Container */
 .form-container {
-    width: 60%;
-    margin: 50px auto;
+    width: 100%;
+    margin: 50px -10px;
     padding-right: 30px;
    
     border: 1px solid #ddd;
@@ -84,6 +83,7 @@ button:hover {
     width: 100%;
     overflow-x: auto; /* Allows horizontal scroll on small screens */
     margin: 20px;
+    margin: 10px;
 }
 
 table {

@@ -156,8 +156,26 @@ catch(error){
 
     return(
         <>
+
+<div className="form-container">
+<h3>Add Clinic</h3>
+<form onSubmit={clinics.clinicID? handleUpdate:handleSubmit}>
+
+<input type="text" name="clinicName"  value={clinics.clinicName} onChange={handleChange} placeholder="Clinic Name" required />
+<input type="email" name="email" value={clinics.email} onChange={handleChange} placeholder='email' required/>
+<input type="text" name="address" value={clinics.address} onChange={handleChange} placeholder="Address" required />          
+<input type="number"   min="1000000000"  max="9999999999"  maxlength="10"  name="contactNumber" value={clinics.contactNumber} onChange={handleChange} placeholder="Contact Number" required />
+<input type="text" name="website" value={clinics.website} onChange={handleChange} placeholder="Website" />
+
+<button type='submit'>{clinics.clinicID? "Update Clinic":"Add Clinic"}</button>
+
+
+</form>
+
+</div>
+
         <div className="table-container">
- 
+        <h3>Clinic Details</h3>
             <table>
               <thead>
                   <tr>                     
@@ -179,22 +197,7 @@ catch(error){
                 </table>
         </div>
 
-        <div className="form-container">
-
-        <form onSubmit={clinics.clinicID? handleUpdate:handleSubmit}>
-
-        <input type="text" name="clinicName"  value={clinics.clinicName} onChange={handleChange} placeholder="Clinic Name" required />
-        <input type="text" name="email" value={clinics.email} onChange={handleChange} placeholder='email'/>
-        <input type="text" name="address" value={clinics.address} onChange={handleChange} placeholder="Address" required />          
-        <input type="text" name="contactNumber" value={clinics.contactNumber} onChange={handleChange} placeholder="Contact Number" required />
-        <input type="text" name="website" value={clinics.website} onChange={handleChange} placeholder="Website" />
-
-        <button type='submit'>{clinics.clinicID? "Update Clinic":"Add Clinic"}</button>
-
-
-        </form>
-
-        </div>
+      
 
 
         </>     
