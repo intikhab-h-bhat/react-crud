@@ -10,7 +10,15 @@ export default function GetClinics(){
     
     const getClinic=async()=>{
 
-       const response= await fetch("https://localhost:7098/api/Clinic",{method:"GET"})
+        const token = localStorage.getItem("token");
+       const response= await fetch("https://localhost:7098/api/Clinic",{
+        method:"GET",
+        headers: {
+            "Authorization": `Bearer ${token}`, // Add the token to the header
+            "Content-Type": "application/json"
+        }
+           
+    })
 
         return response.json();
 
@@ -57,9 +65,13 @@ const handleSubmit=async(e)=>
     e.preventDefault()
     
 try{
+    const token = localStorage.getItem("token");
     const response= await fetch("https://localhost:7098/api/Clinic",{
         method:"POST",
-        headers:{"Content-Type":"application/json"},
+        headers: {
+            "Authorization": `Bearer ${token}`, // Add the token to the header
+            "Content-Type": "application/json"
+        },
         body: JSON.stringify(clinics)    
     
     })
@@ -85,8 +97,13 @@ const handleDelete = async(id)=>{
 
 
 try{
-console.log(id,"hhhhhhhhhhhhhh")
-const response= await fetch(`https://localhost:7098/api/Clinic/${id}`,{method:"DELETE"})
+const token = localStorage.getItem("token");
+const response= await fetch(`https://localhost:7098/api/Clinic/${id}`,{method:"DELETE",
+    headers: {
+        "Authorization": `Bearer ${token}`, // Add the token to the header
+        "Content-Type": "application/json"
+    },
+})
 
 if(response.ok){
     alert("clinic deleted sucessfully")
